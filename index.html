@@ -6,152 +6,69 @@
     <link rel="stylesheet" href="css/angular-material.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Marija Djalovic</title>
 </head>
 <body ng-controller="MainCtrl">
 <header class="banner" role="banner">
     <div class="header-utility">
         <div class="container" layout layout-align="end center">
-            <span class="phone">Call us: 888-523-9042</span> &nbsp;|
+            <span class="phone">Контакт: 037/445-770</span> &nbsp;|
             <ul id="menu-header-utility" class="nav">
-                <li class="menu-your-account"><a href="/shop/account/">Your Account</a></li>
-                <li class="cart-link menu-cart"><a href="/shop/cart/">Cart</a></li>
+                <li class="menu-your-account">Email:<a href="mailto:drmarijadjalovic@gmail.com">drmarijadjalovic@gmail.com</a></li>
             </ul>
         </div>
     </div>
     <div class="container">
         <div class="navbar-header" layout>
-            <a class="brand" href="https://www.gottman.com/"><img
-                    src="https://www.gottman.com/wp-content/themes/gottman/dist/images/logo-tgi.png"
-                    alt="The Gottman Institute" scale="0"></a>
-            <p class="tagline">A research-based approach to creating stronger relationships</p>
-
+            <a href="/"><img width="200px" height="200px" style="max-height: 200px;" src="img/zub.png"/></a>
+        <a class="brand" href="/"><img
+                src="img/naslov.png"
+                alt="The Gottman Institute" scale="0"></a>
+        <a href="#/"><img class="mint"
+                src="img/mint_15.jpg"
+                alt="The Gottman Institute" scale="0"></a>
         </div>
     </div>
 </header>
 <section class="navigation">
     <nav layout layout-align="center center">
         <ul>
-            <li ng-repeat="item in menu"><a href="#">{{ item }}</a></li>
+            <li><a href="#/">ПОЧЕТНА</a></li>
+            <li><a href="#/ordinacija">ОРДИНАЦИЈА</a></li>
+            <li><a href="#/saveti">ПИТАЊА И САВЕТИ</a></li>
+            <li><a href="#/kontakt">КОНТАКТ</a></li>
         </ul>
     </nav>
 </section>
-<section class="parallax">
-    <div class="parallax-content">
-        <div class="container" layout="column" layout-align="center start">
-            <h1>Stomatoloska ordinacija</h1>
-            <p>Doktor Marija Djalovic</p>
-        </div>
-    </div>
-</section>
-<section class="highlights">
-    <div class="container" layout>
-        <div flex>
-            <h1>Emotion Couching</h1>
-            <p>Emotion Coaching: The Heart of Parenting presents a 5-step method that builds emotional intelligence and
-                creates positive, long lasting effects for children. Easy to learn, and used by parents, educators, and
-                care-givers, it supports kids through life’s ups and downs in a way that builds confidence and helps
-                them grow socially, emotionally, and intellectually. Available as a manual and DVD set or an online
-                streaming program.
-            </p>
-        </div>
-        <div flex layout layout-align="center center">
-            <img src="https://www.gottman.com/wp-content/uploads/2015/09/graphic-emotion-coaching1.png" alt="">
-        </div>
-    </div>
-</section>
-<section class="highlights" style="background: #f8f8f8" layout-wrap>
-    <div class="container" layout>
-        <div flex layout layout-align="center center">
-            <img src="https://www.gottman.com/wp-content/uploads/2015/09/graphic-parents-workshops1.png" alt="">
-        </div>
-        <div flex>
-            <h1>New Parent Workshop</h1>
-            <p>Even the best relationships are strained during the transition from duo to trio. This research-based
-                workshop, developed by Drs. John and Julie Gottman and presented by Gottman Bringing Baby Home
-                Educators, helps to prepare you for the most important and rewarding job you will ever have: raising a
-                child.
-            </p>
-            <md-button class="md-warn">Find a workshop</md-button>
-        </div>
-    </div>
-</section>
-<section class="highlights">
-    <div class="container" layout>
-        <div flex>
-            <h1>Products</h1>
-            <p>With our easy to understand and entertaining video programs, books, and cark decks, parents can learn
-                skills to guide their children at every age.
-            </p>
-            <ul>
-                <li><a href="">Books and Programs</a></li>
-                <li><a href="">Kimochis</a></li>
-                <li><a href="">Other parenting programs</a></li>
-            </ul>
-            <md-button class="md-accent">VIEW ALL PROGRAMS</md-button>
-        </div>
-        <div flex layout layout-align="center center">
-            <img src="https://www.gottman.com/wp-content/uploads/2015/09/graphic-parents-products1.png" alt="">
-        </div>
-    </div>
-</section>
+<div ng-view class="nga-default nga-stagger-slow nga-slide-left">
+</div>
 <footer class="footer-info">
     <div class="container" layout="column">
         <section layout>
             <div class="widget" flex>
-                <h3>Support</h3>
+                <h3>Протетика</h3>
                 <ul>
-                    <li><a href="">Customer service</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="">Hire a speaker</a></li>
+                    <li><a href="" ng-click="showMore('krunice')">Крунице</a></li>
+                    <li><a href="" ng-click="showMore('mostovi')">Мостови</a></li>
+                    <li><a href="" ng-click="showMore('plocaste')">Парцијалне плочасте протезе</a></li>
+                    <li><a href="" ng-click="showMore('skeletirana')">Парцијална скелетна протеза</a></li>
+                    <li><a href="" ng-click="showMore('totalna')">Тоталне протезе</a></li>
                 </ul>
             </div>
             <div class="widget" flex>
-                <h3>Couples</h3>
+                <h3>Дечја и превентивна стоматологија</h3>
                 <ul>
-                    <li><a href="">The Art and Science of Love</a></li>
-                    <li><a href="">The Art and Science of Love 2</a></li>
-                    <li><a href="">Books, Video and Other Products</a></li>
-                    <li><a href="">Private Couples Retreat</a></li>
+                    <li><a href="" ng-click="showMore('oralna')">Орална хигијена</a></li>
+                    <li><a href="" ng-click="showMore('ciscenje')">Професионално чишћење зуба</a></li>
                 </ul>
             </div>
             <div class="widget" flex>
-                <h3>About</h3>
+                <h3>Бељење зуба</h3>
                 <ul>
-                    <li><a href="">Our mission</a></li>
-                    <li><a href="">Dr. John and Julie Gottman</a></li>
-                    <li><a href="">The Research</a></li>
-                    <li><a href="">The Gottman Method</a></li>
-                    <li><a href="">Our Team</a></li>
-                </ul>
-            </div>
-        </section>
-        <section layout>
-            <div class="widget" flex>
-                <h3>Support</h3>
-                <ul>
-                    <li><a href="">Customer service</a></li>
-                    <li><a href="">Contact us</a></li>
-                    <li><a href="">Hire a speaker</a></li>
-                </ul>
-            </div>
-            <div class="widget" flex>
-                <h3>Couples</h3>
-                <ul>
-                    <li><a href="">The Art and Science of Love</a></li>
-                    <li><a href="">The Art and Science of Love 2</a></li>
-                    <li><a href="">Books, Video and Other Products</a></li>
-                    <li><a href="">Private Couples Retreat</a></li>
-                </ul>
-            </div>
-            <div class="widget" flex>
-                <h3>About</h3>
-                <ul>
-                    <li><a href="">Our mission</a></li>
-                    <li><a href="">Dr. John and Julie Gottman</a></li>
-                    <li><a href="">The Research</a></li>
-                    <li><a href="">The Gottman Method</a></li>
-                    <li><a href="">Our Team</a></li>
+                    <li><a href="" ng-click="showMore('ordinacijsko')">Ординацијско бељење зуба</a></li>
+                    <li><a href="" ng-click="showMore('kucno')">Кућно бељење зуба</a></li>
+                    <li><a href="" ng-click="showMore('beljenje')">Бељење авиталних зуба</a></li>
                 </ul>
             </div>
         </section>
@@ -161,17 +78,12 @@
             <div flex layout-align="end end">
                 <span>©2016 Filip Tomic. All Rights Reserved.</span>
             </div>
-            <div layout layout-align="end end">
-                <ul class="nav social-nav">
-                    <li class="menu-privacy-hipaa-policy"><a href="https://www.gottman.com/privacy-and-hipaa-policy/">Privacy
-                        &amp; HIPAA Policy</a></li>
-                    <li class="menu-sitemap"><a href="https://www.gottman.com/sitemap/">Sitemap</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 </footer>
 <script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-animate.min.js"></script>
 <script src="lib/angular-aria/angular-aria.min.js"></script>
 <script src="lib/angular-animate/angular-animate.min.js"></script>
 <script src="lib/angular-messages/angular-messages.min.js"></script>
